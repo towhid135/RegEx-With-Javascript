@@ -1,0 +1,21 @@
+<script>
+    //at least one number
+    const str = "HelloWorld!1";
+    const regex = /\d/;
+    console.log('one number',regex.test(str));
+
+    //at least one lower case
+    const str1 = 'ALADLssss';
+    const regex1 = /[a-z]/;
+    console.log('one lower',regex1.test(str1));
+
+    //at least one upper case
+    const str2 = 'Dssksk';
+    const regex2 = /[A-Z]/
+    console.log('one upper',regex2.test(str2))
+
+    // at least one special character
+    const str3 = '-';
+    const regex3 = /[!@#\$%\^&\*\\\(\)\[\]+-=:,''""]/
+    console.log('one special char',regex3.test(str3));
+</script>
