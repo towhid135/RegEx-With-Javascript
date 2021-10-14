@@ -13,8 +13,23 @@
     const str2 = 'Dssksk';
     const regex2 = /[A-Z]/
     console.log('one upper',regex2.test(str2))
+    
+    //at least one special char with function
+    const specialChar = text =>{
+    let isSpecial = false;
+    for (ch in text){
+        let char = text[ch].charCodeAt(0);
+        if( !( (char<=57 && char>=48) ||
+        (char>=97 && char<=122) || (char>=65 && char<=90) ) ){
+           isSpecial = true;
+		   break;
+        }
+    }
+	return isSpecial;
+	
+	}
 
-    // at least one special character
+    // at least one special character with regext
     const str3 = '-';
     const regex3 = /[!@#\$%\^&\*\\\(\)\[\]+-=:,''""]/
     console.log('one special char',regex3.test(str3));
